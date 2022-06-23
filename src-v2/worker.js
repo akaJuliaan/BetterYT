@@ -1,6 +1,13 @@
 function init() {
-  loadEmotes().then((emotes) => {});
+  loadEmotes().then((emotes) => {
+    console.log("Successfully loaded Emotes!");
+    findChatFrame().then((chat) => {
+      console.log("Found Chat-Frame!");
+    });
+  });
 }
+
+function replaceEmotes(message) {}
 
 function loadEmotes() {
   return new Promise((resolve, reject) => {
