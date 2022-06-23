@@ -1,0 +1,12 @@
+{
+    "appTitle": {
+        "message": "Better YouTube"
+    },
+    "appDesc": {
+        "message": "Better Youtube amplia el xat de Youtube Gaming Livestream amb moltes funcions diferents",
+        "description": "The description of the application."
+    },
+    "appDonation": {
+        "message": "Les donacions són absolutament voluntàries i no aporten cap benefici."
+    }
+}

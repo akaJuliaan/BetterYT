@@ -1,0 +1,12 @@
+{
+    "appTitle": {
+        "message": "Better YouTube"
+    },
+    "appDesc": {
+        "message": "Το Better Youtube επεκτείνει τη συνομιλία ζωντανής ροής Youtube Gaming με πολλές διαφορετικές δυνατότητες",
+        "description": "The description of the application."
+    },
+    "appDonation": {
+        "message": "Οι δωρεές είναι απολύτως εθελοντικές και δεν φέρνουν κανένα όφελος!"
+    }
+}

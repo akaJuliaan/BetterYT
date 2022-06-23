@@ -1,0 +1,12 @@
+{
+    "appTitle": {
+        "message": "Better YouTube"
+    },
+    "appDesc": {
+        "message": "Better Youtube rozszerza czat YouTube Gaming Livestream o wiele różnych funkcji",
+        "description": "The description of the application."
+    },
+    "appDonation": {
+        "message": "Darowizny są całkowicie dobrowolne i nie przynoszą żadnych korzyści!"
+    }
+}

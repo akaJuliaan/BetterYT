@@ -1,0 +1,12 @@
+{
+    "appTitle": {
+        "message": "Better YouTube"
+    },
+    "appDesc": {
+        "message": "Better Youtube amplía el chat de transmisión en vivo de juegos de Youtube con muchas características diferentes",
+        "description": "The description of the application."
+    },
+    "appDonation": {
+        "message": "¡Las donaciones son absolutamente voluntarias y no aportan ningún beneficio!"
+    }
+}

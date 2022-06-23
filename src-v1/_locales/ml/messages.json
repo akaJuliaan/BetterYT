@@ -1,0 +1,12 @@
+{
+    "appTitle": {
+        "message": "Better YouTube"
+    },
+    "appDesc": {
+        "message": "മികച്ച സവിശേഷതകളുള്ള യൂട്യൂബ് ഗെയിമിംഗ് ലൈവ്സ്ട്രീം ചാറ്റ് വിപുലീകരിക്കുന്നു",
+        "description": "The description of the application."
+    },
+    "appDonation": {
+        "message": "സംഭാവനകൾ തികച്ചും സ്വമേധയാ ഉള്ളതാണ്, യാതൊരു പ്രയോജനവും നൽകുന്നില്ല!"
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "appTitle": {
+        "message": "Better YouTube"
+    },
+    "appDesc": {
+        "message": "Better Youtube paplašina Youtube Gaming tiešraides tērzēšanu ar daudzām dažādām funkcijām",
+        "description": "The description of the application."
+    },
+    "appDonation": {
+        "message": "Ziedošana ir absolūti brīvprātīga un nesniedz nekādu labumu!"
+    }
+}

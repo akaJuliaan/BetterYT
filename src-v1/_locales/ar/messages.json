@@ -1,0 +1,12 @@
+{
+    "appTitle": {
+        "message": "Better YouTube"
+    },
+    "appDesc": {
+        "message": "يوسع موقع Better Youtube نطاق دردشة Youtube Gaming Livestream مع العديد من الميزات المختلفة",
+        "description": "The description of the application."
+    },
+    "appDonation": {
+        "message": "التبرعات طوعية تمامًا ولا تجلب أي فوائد!"
+    }
+}
