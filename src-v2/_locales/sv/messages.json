@@ -1,0 +1,12 @@
+{
+    "appTitle": {
+        "message": "Better YouTube"
+    },
+    "appDesc": {
+        "message": "Better Youtube utökar Youtube Gaming Livestream Chat med många olika funktioner",
+        "description": "The description of the application."
+    },
+    "appDonation": {
+        "message": "Donationer är helt frivilliga och ger inga fördelar!"
+    }
+}

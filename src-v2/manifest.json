@@ -1,0 +1,29 @@
+{
+  "name": "__MSG_appTitle__",
+  "description": "__MSG_appDesc__",
+  "version": "2.0.0.0",
+  "default_locale": "en",
+  "manifest_version": 3,
+  "permissions": [],
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["worker.js"]
+    }
+  ],
+  "icons": {
+    "16": "/images/Logo_x16.png",
+    "32": "/images/Logo_x32.png",
+    "48": "/images/Logo_x48.png",
+    "128": "/images/Logo_x128.png"
+  },
+  "action": {
+    "default_popup": "donation.html",
+    "default_icon": {
+      "16": "/images/Logo_x16.png",
+      "32": "/images/Logo_x32.png",
+      "48": "/images/Logo_x48.png",
+      "128": "/images/Logo_x128.png"
+    }
+  }
+}

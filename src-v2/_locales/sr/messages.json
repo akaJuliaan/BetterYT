@@ -1,0 +1,12 @@
+{
+    "appTitle": {
+        "message": "Better YouTube"
+    },
+    "appDesc": {
+        "message": "Боље Иоутубе проширује Иоутубе Гаминг Ливестреам Цхат са много различитих функција",
+        "description": "The description of the application."
+    },
+    "appDonation": {
+        "message": "Донације су апсолутно добровољне и не доносе никакве бенефиције!"
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "appTitle": {
+        "message": "Better YouTube"
+    },
+    "appDesc": {
+        "message": "Better Youtubeは、Youtube Gaming LivestreamChatをさまざまな機能で拡張します",
+        "description": "The description of the application."
+    },
+    "appDonation": {
+        "message": "寄付は完全に任意であり、利益をもたらすものではありません。"
+    }
+}

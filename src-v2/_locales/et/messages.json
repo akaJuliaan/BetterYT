@@ -1,0 +1,12 @@
+{
+    "appTitle": {
+        "message": "Better YouTube"
+    },
+    "appDesc": {
+        "message": "Better Youtube laiendab Youtube Gaming Livestream vestlust paljude erinevate funktsioonidega",
+        "description": "The description of the application."
+    },
+    "appDonation": {
+        "message": "Annetused on absoluutselt vabatahtlikud ega too mingit kasu!"
+    }
+}

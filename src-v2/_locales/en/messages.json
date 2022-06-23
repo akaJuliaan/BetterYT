@@ -1,0 +1,12 @@
+{
+    "appTitle": {
+        "message": "Better YouTube"
+    },
+    "appDesc": {
+        "message": "Better Youtube extends the Youtube Gaming Livestream Chat with many different features",
+        "description": "The description of the application."
+    },
+    "appDonation": {
+        "message": "Donations are absolutely voluntary and do not bring any benefits!"
+    }
+}

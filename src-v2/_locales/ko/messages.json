@@ -1,0 +1,12 @@
+{
+    "appTitle": {
+        "message": "Better YouTube"
+    },
+    "appDesc": {
+        "message": "Better Youtube는 다양한 기능으로 Youtube Gaming Livestream 채팅을 확장합니다.",
+        "description": "The description of the application."
+    },
+    "appDonation": {
+        "message": "기부는 절대적으로 자발적이며 어떠한 혜택도 가져오지 않습니다!"
+    }
+}
