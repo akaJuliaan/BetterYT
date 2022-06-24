@@ -1,16 +1,9 @@
-let e = [];
-
 function init() {
   loadEmotes().then((emotes) => {
-    e = emotes;
     console.log("Successfully loaded Emotes!");
     findChatFrame().then((chat) => {
       console.log("Found Chat-Frame!");
-      setInterval(() => {
-        for (const message of chat.getElementById("chat-messages").querySelectorAll("yt-live-chat-text-message-renderer")) {
-          replaceEmotes(message, emotes);
-        }
-      }, 500);
+      registerObserver(chat.querySelector("#chat #items"), emotes);
     });
   });
 }
@@ -47,6 +40,25 @@ function replaceEmotes(message, emotes) {
       }
     }
   }
+}
+
+function registerObserver(items, emotes) {
+  observer = new MutationObserver(function callback(records) {
+    for (const record of records) {
+      const node = record.target;
+      if (node.id == "message" || node.tagName == "yt-live-chat-text-message-renderer") {
+        for (const message of items.querySelectorAll("yt-live-chat-text-message-renderer")) {
+          replaceEmotes(message, emotes);
+        }
+        break;
+      }
+    }
+  });
+
+  observer.observe(items, {
+    subtree: true,
+    childList: true,
+  });
 }
 
 function loadEmotes() {
