@@ -19,42 +19,32 @@ function replaceEmotes(message, emotes) {
   for (const emote of emotes) {
     let content = message.querySelector("#message");
     for (const node of content.childNodes) {
-      setTimeout(() => {
-        if (node.nodeType != Node.TEXT_NODE) return;
-        const nodeContent = node.nodeValue;
-        if (!nodeContent) return;
-        if (nodeContent.includes(emote.name)) {
-          //Wie geil Pog hahaha
-          const begin = nodeContent.indexOf(emote.name);
-          const end = begin + emote.name.length;
+      if (node.nodeType != Node.TEXT_NODE) continue;
+      const nodeContent = node.nodeValue;
+      if (!nodeContent) continue;
+      if (nodeContent.includes(emote.name)) {
+        const begin = nodeContent.indexOf(emote.name);
+        const end = begin + emote.name.length;
 
-          const textAfterEmote = nodeContent.substring(end, nodeContent.length);
-          const textBeforeEmote = nodeContent.substring(0, begin);
+        const textAfterEmote = nodeContent.substring(end, nodeContent.length);
+        const textBeforeEmote = nodeContent.substring(0, begin);
 
-          node.nodeValue = nodeContent.replace(emote.name, "");
+        let img = document.createElement("IMG");
+        img.setAttribute("src", emote.link);
+        img.setAttribute("alt", emote.name);
+        img.setAttribute("style", "vertical-align:middle");
+        img.setAttribute("class", "yt-formatted-string style-scope yt-live-chat-text-message-renderer");
+        img.setAttribute("shared-tooltip-text", ":BetterYT:");
 
-          //let newNode = content.cloneNode(true);
-          let newNode = document.createElement("span");
-          //newNode.setAttribute("id", content.id);
+        const nextSibling = node.nextSibling;
 
-          let img = document.createElement("IMG");
-          img.setAttribute("src", emote.link);
-          img.setAttribute("alt", emote.name);
-          img.setAttribute("style", "vertical-align:middle");
-          img.setAttribute("class", "yt-formatted-string style-scope yt-live-chat-text-message-renderer");
-          img.setAttribute("shared-tooltip-text", ":BetterYT:");
-          newNode.appendChild(document.createTextNode(textBeforeEmote));
-          newNode.appendChild(img);
-          newNode.appendChild(document.createTextNode(textAfterEmote));
+        //regex => check if only spaces
+        if (textBeforeEmote.replace(/\s/g, "").length) content.replaceChild(document.createTextNode(textBeforeEmote), node);
+        else node.remove();
 
-          content.replaceChild(document.createTextNode(textBeforeEmote), node);
-          const emote_img = content.insertBefore(img, node.nextSibling);
-          content.insertBefore(document.createTextNode(textAfterEmote), emote_img.nextSibling);
-
-          //content.replaceWith(newNode);
-          //replaceEmotes(message, e); //if more than 1 emote
-        }
-      }, 500);
+        const emote_img = content.insertBefore(img, nextSibling);
+        if (textAfterEmote.replace(/\s/g, "").length) content.insertBefore(document.createTextNode(textAfterEmote), emote_img.nextSibling);
+      }
     }
   }
 }
