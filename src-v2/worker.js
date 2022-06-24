@@ -1,3 +1,5 @@
+init();
+
 function init() {
   loadEmotes().then((emotes) => {
     console.log("Successfully loaded Emotes!");
