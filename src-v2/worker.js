@@ -33,12 +33,11 @@ function replaceEmotes(message, emotes) {
 
         const nextSibling = node.nextSibling;
 
-        //regex => check if only spaces
-        if (textBeforeEmote.replace(/\s/g, "").length) content.replaceChild(document.createTextNode(textBeforeEmote), node);
+        if (textBeforeEmote !== "") content.replaceChild(document.createTextNode(textBeforeEmote), node);
         else node.remove();
 
         const emote_img = content.insertBefore(img, nextSibling);
-        if (textAfterEmote.replace(/\s/g, "").length) content.insertBefore(document.createTextNode(textAfterEmote), emote_img.nextSibling);
+        if (textAfterEmote !== "") content.insertBefore(document.createTextNode(textAfterEmote), emote_img.nextSibling);
       }
     }
   }
