@@ -1,3 +1,5 @@
 *
-!*/src-*
+
+!src-v1
+!src-v2
 !.gitignore
