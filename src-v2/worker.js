@@ -11,8 +11,8 @@ function init() {
 }
 
 function replaceEmotes(message, emotes) {
+  let content = message.querySelector("#message");
   for (const emote of emotes) {
-    let content = message.querySelector("#message");
     for (const node of content.childNodes) {
       if (node.nodeType != Node.TEXT_NODE) continue;
       const nodeContent = node.nodeValue;
