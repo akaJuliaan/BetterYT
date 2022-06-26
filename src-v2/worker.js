@@ -5,6 +5,7 @@ function init() {
     console.log("Successfully loaded Emotes!");
     findChatFrame().then((chat) => {
       console.log("Found Chat-Frame!");
+      registerTabcomplete(chat.querySelector("#input"), chat, emotes);
       registerObserver(chat.querySelector("#chat #items"), emotes);
     });
   });
@@ -59,6 +60,54 @@ function registerObserver(items, emotes) {
   observer.observe(items, {
     subtree: true,
     childList: true,
+  });
+}
+
+const suggestions = [];
+function registerTabcomplete(input, root, emotes) {
+  input.addEventListener("keydown", (e) => {
+    if (e.key == "Tab") {
+      const chatField = e.currentTarget.querySelector("#input");
+      const splittedMessage = chatField.textContent.split(" ");
+      const lastWord = splittedMessage[splittedMessage.length - 1];
+
+      let emote = "";
+      if (suggestions.length <= 0) {
+        for (const emote of emotes) {
+          if (emote.name.toLowerCase().substring(0, lastWord.length) == lastWord.toLowerCase()) {
+            suggestions.push(emote.name);
+          }
+        }
+      } else {
+        let i = suggestions.findIndex((x) => x.toLowerCase() == lastWord.toLowerCase());
+
+        if (i == suggestions.length - 1) i = -1;
+        emote = suggestions[i + 1];
+
+        let newMessage = chatField.textContent.substring(0, chatField.textContent.lastIndexOf(" ")) + " " + emote;
+        if (newMessage.charAt(0) == " ") newMessage = newMessage.substring(1);
+        chatField.textContent = newMessage;
+      }
+
+      const eventInput = new InputEvent("input", {
+        bubbles: true,
+        cancelable: false,
+      });
+
+      chatField.dispatchEvent(eventInput);
+      chatField.focus();
+
+      const range = root.createRange();
+      const sel = root.getSelection();
+
+      range.setStart(chatField.childNodes[0], chatField.textContent.length);
+      range.collapse(true);
+
+      sel.removeAllRanges();
+      sel.addRange(range);
+
+      e.preventDefault();
+    } else suggestions.length = 0;
   });
 }
 
