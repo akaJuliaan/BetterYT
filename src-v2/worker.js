@@ -1,4 +1,6 @@
-init();
+window.addEventListener("yt-navigate-finish", function (e) {
+  init(); //start listener on page load
+});
 
 function init() {
   loadEmotes().then((emotes) => {
